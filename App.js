@@ -7,6 +7,7 @@
  */
 
 import * as React from 'react';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {MainScreen} from './src/MainScreen';
 
 const data = [
@@ -16,7 +17,11 @@ const data = [
 ];
 
 const App = () => {
-  return <MainScreen />;
+  return (
+    <SafeAreaProvider>
+      <MainScreen />
+    </SafeAreaProvider>
+  );
 };
 
 export default App;
